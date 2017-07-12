@@ -7,9 +7,6 @@ from bs4 import BeautifulSoup
 import time
 import numpy as np
 
-
-
-
 def WriteArtistLyrics(artist,popular=False):
 	# this visits the website
 	if popular is False:
@@ -107,11 +104,9 @@ artistList=[
 	'schoolboy-q','nas',
 	'dmx'
 	]
-import time
-import numpy as np
 totalverses=0
-#for artist in artistList:
-#	totalverses+=WriteArtistLyrics(artist)
-#	print('sleeping for a random amount of time so metrolyrics doesnt ban me')
-#	time.sleep(np.random.random()*1.5)
-#print "TOTAL VERSES: {}| NUMBER OF ARTISTS: {}".format(totalverses,len(artistList))
+for artist in artistList:
+	totalverses+=WriteArtistLyrics(artist)
+	print('sleeping for a random amount of time so metrolyrics doesnt ban me')
+	time.sleep(np.random.random()*1.5)
+print "TOTAL VERSES: {}| NUMBER OF ARTISTS: {}".format(totalverses,len(artistList))
